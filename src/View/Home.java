@@ -3,11 +3,14 @@ package View;
 import java.util.Scanner;
 
 import Models.FileCreation;
+import Models.Task;
+import Services.TaskServices;
 
 public class Home {
     
     private static Home _Instance;
-    
+    private TaskServices ts;
+
     private Home(){
        FileCreation.getInstance();
         DashBoard();
@@ -32,11 +35,12 @@ public class Home {
       sc.nextLine();
       switch (choice) {
         case 1:
-            System.out.println("Please enter the task details: ");
-
+            Task t = new Task();
+            new TaskServices().AddTask(t);
             break;
         case 2:
-
+           
+            break;
         default:
             sc.close();
             break;

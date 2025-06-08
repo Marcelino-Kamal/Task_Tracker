@@ -1,23 +1,22 @@
 package Models;
 
-import java.util.Date;
+
+
 
 public class Task {
-    private int id;
+    private static int id = 0;
     private String desc;
-    private Date createdAt;
-    private Date updatedDate;
-    private int status;
+    private String createdAt;
+    private String updatedDate;
+    private State status;
 
+    public Task(){
+        this.id++;
+    }
 
-    public int getId() {
+    public int getId(){
         return this.id;
     }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getDesc() {
         return this.desc;
     }
@@ -26,29 +25,31 @@ public class Task {
         this.desc = desc;
     }
 
-    public Date getCreatedAt() {
+    public String getCreatedAt() {
         return this.createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
 
-    public Date getUpdatedDate() {
+    public String getUpdatedDate() {
         return this.updatedDate;
     }
 
-    public void setUpdatedDate(Date updatedDate) {
+    public void setUpdatedDate(String updatedDate) {
         this.updatedDate = updatedDate;
     }
 
-    public int getStatus() {
+    public State getStatus() {
         return this.status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(State status) {
         this.status = status;
     }
+
+  
 
 
 
